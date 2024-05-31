@@ -8,8 +8,20 @@ export async function container(request: HttpRequest, context: InvocationContext
     return { body: `HelloBobi, ${name}!` };
 };
 
+app.http('validate', {
+    methods: ['GET'],
+    authLevel: 'anonymous',
+    handler: validate
+});
+
 app.http('container', {
     methods: ['GET', 'POST'],
     authLevel: 'anonymous',
     handler: container
+});
+
+app.http('containers', {
+    methods: ['GET', 'POST'],
+    authLevel: 'anonymous',
+    handler: containers
 });
