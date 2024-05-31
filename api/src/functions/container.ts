@@ -5,7 +5,7 @@ export async function container(request: HttpRequest, context: InvocationContext
 
     const name = request.query.get('name') || await request.text() || 'world';
 
-    return { body: `HelloBobi, ${name}!` };
+    return { body: `HelloBobihello, ${name}!` };
 };
 
 app.http('validate', {
