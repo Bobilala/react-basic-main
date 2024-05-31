@@ -5,9 +5,20 @@ export async function container(request: HttpRequest, context: InvocationContext
 
     const name = request.query.get('name') || await request.text() || 'world';
 
-    return { body: `HelloBobihello, ${name}!` };
+    return { body: `HelloBobihelloBobi, ${name}!` };
 };
 
+app.http('validate', {
+    methods: ['GET'],
+    authLevel: 'anonymous',
+    handler: validate
+});
+
+app.http('containers', {
+    methods: ['GET', 'POST'],
+    authLevel: 'anonymous',
+    handler: containers
+});
 
 app.http('container', {
     methods: ['GET', 'POST'],
