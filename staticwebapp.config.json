@@ -5,12 +5,6 @@
   "routes": [
     {
       "route": "/",
-      "methods": [
-        "get",
-        "post"
-      ],
-      "redirect": "/.auth/login/aad",
-      "statusCode": 401,
       "allowedRoles": [
         "administrator"
       ]
