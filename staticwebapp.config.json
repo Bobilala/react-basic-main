@@ -4,12 +4,6 @@
   },
   "routes": [
     {
-      "route": "/",
-      "allowedRoles": [
-        "administrator"
-      ]
-    },
-    {
       "route": "/*",
       "allowedRoles": [
         "test"
