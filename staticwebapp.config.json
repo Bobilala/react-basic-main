@@ -4,16 +4,6 @@
   },
   "routes": [
     {
-      "route": "/*",
-      "methods": [
-        "get",
-        "post"
-      ],
-      "allowedRoles": [
-        "test"
-      ]
-    },
-    {
       "route": "/",
       "methods": [
         "get",
