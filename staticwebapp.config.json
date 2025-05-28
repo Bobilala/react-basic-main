@@ -1,5 +1,16 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html"
-  }
+  },
+  "routes": [
+    {
+      "route": "*",
+      "methods": [
+        "get"
+      ],
+      "allowedRoles": [
+        "test"
+      ]
+    }
+  ]
 }
